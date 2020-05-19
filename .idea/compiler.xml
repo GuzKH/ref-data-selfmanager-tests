@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ref-data-selfmanager-tests" target="9" />
+      <module name="ref-data-selfmanager-tests" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
