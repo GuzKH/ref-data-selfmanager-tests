@@ -22,12 +22,12 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>2.13.3</version>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-testng &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-testng</artifactId>-->
+<!--            <version>2.13.3</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
         <dependency>
@@ -61,6 +61,15 @@
 <!--                        <suiteXmlFile>TestNG.xml</suiteXmlFile>-->
 <!--                    </suiteXmlFiles>-->
 <!--                </configuration>-->
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <reportVersion>2.6.0</reportVersion>
+                </configuration>
             </plugin>
 
         </plugins>
