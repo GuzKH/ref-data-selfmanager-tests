@@ -38,9 +38,11 @@ pipeline {
 
         stage('Notification') {
             steps {
-                sh '''
-                    echo "Notification"
-                '''
+                zoomSend([
+                        authToken : 'NIwzvCS4Ihi0ClNGzdB327UNLT-FeL6ujarJ-o0kxPlyLnMU0Ls',
+                        webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/k-rjQysTQaiYi65449s3Qg',
+                        message   : '']
+                )
             }
         }
     }
