@@ -18,7 +18,7 @@ pipeline {
                 zoomSend([
                         authToken : 'JuAlhTSVHx63U09d3K4dqvBnNF2faEArpXmk0SrCaba7PSTuAw8',
                         webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/yAdSATNRR8uBxH_EqSjQKw',
-                        message   : "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
+                        message   : "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) by ${env.BUILD_USER}"
                 ])
             }
         }
@@ -46,7 +46,8 @@ pipeline {
                 zoomSend([
                         authToken : 'JuAlhTSVHx63U09d3K4dqvBnNF2faEArpXmk0SrCaba7PSTuAw8',
                         webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/yAdSATNRR8uBxH_EqSjQKw',
-                        message   : "FINISHED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})"
+                        message   : "FINISHED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) by ${env.BUILD_USER}." +
+                                "Status = ${currentBuild.result}, after ${currentBuild.durationString}. Info = ${currentBuild.description}"
                 ])
             }
         }
