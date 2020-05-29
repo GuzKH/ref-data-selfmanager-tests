@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 pipeline {
     agent any
 
@@ -23,13 +25,15 @@ pipeline {
         }
 
         stage('Reports') {
-            allure([
-                    includeProperties: false,
-                    jdk              : '',
-                    properties       : [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results          : [[path: 'target/allure-results']]
-            ])
+            steps {
+                allure([
+                        includeProperties: false,
+                        jdk              : '',
+                        properties       : [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results          : [[path: 'target/allure-results']]
+                ])
+            }
         }
 
         stage('Notification') {
