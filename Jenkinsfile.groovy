@@ -39,9 +39,9 @@ pipeline {
         stage('Notification') {
             steps {
                 zoomSend([
-                        authToken : 'NIwzvCS4Ihi0ClNGzdB327UNLT-FeL6ujarJ-o0kxPlyLnMU0Ls',
-                        webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/k-rjQysTQaiYi65449s3Qg',
-                        message   : '']
+                        authToken : 'JuAlhTSVHx63U09d3K4dqvBnNF2faEArpXmk0SrCaba7PSTuAw8',
+                        webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/yAdSATNRR8uBxH_EqSjQKw',
+                        message   : 'TestsRefDataSelfmanager started by user']
                 )
             }
         }
