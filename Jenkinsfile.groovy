@@ -43,7 +43,7 @@ pipeline {
         }
     }
     post {
-        allways {
+        always {
             zoomSend([
                     authToken : 'JuAlhTSVHx63U09d3K4dqvBnNF2faEArpXmk0SrCaba7PSTuAw8',
                     webhookUrl: 'https://applications.zoom.us/addon/v2/jenkins/webhooks/yAdSATNRR8uBxH_EqSjQKw',
