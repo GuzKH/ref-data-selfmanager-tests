@@ -37,6 +37,11 @@ pipeline {
         }
 
         stage('Notification') {
+            steps {
+                sh '''
+                    echo "Notification"
+                '''
+            }
         }
     }
 }
